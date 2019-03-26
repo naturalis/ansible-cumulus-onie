@@ -1,6 +1,6 @@
 ---
 - name: Write Syslog on switch to inform Ansible Start
-  shell: /usr/bin/logger -t "ANSIBLE" "ONIE Update Routine starting."
+  shell: /usr/bin/logger -t "ANSIBLE" "ONIE update staging."
   tags:
     - onie
 
@@ -9,7 +9,7 @@
     - onie
 
 - name: Write Syslog on switch to inform Ansible Finish
-  shell: /usr/bin/logger -t "ANSIBLE" "ONIE update routine complete. Rebooting now."
+  shell: /usr/bin/logger -t "ANSIBLE" "ONIE update is staged. Rebooting now."
   notify: restart and update
   tags:
     - onie
