@@ -1,0 +1,15 @@
+---
+- name: Write Syslog on switch to inform Ansible Start
+  shell: /usr/bin/logger -t "ANSIBLE" "ONIE Update Routine starting."
+  tags:
+    - onie
+
+- import_tasks: update.yml
+  tags:
+    - onie
+
+- name: Write Syslog on switch to inform Ansible Finish
+  shell: /usr/bin/logger -t "ANSIBLE" "ONIE update routine complete. Rebooting now."
+  notify: restart and update
+  tags:
+    - onie

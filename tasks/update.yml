@@ -1,0 +1,3 @@
+---
+- name: Stage ONIE update
+  shell: /usr/cumulus/bin/onie-self-update {{ cl_oob_server }}/onie-updater

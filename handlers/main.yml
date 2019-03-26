@@ -1,0 +1,6 @@
+---
+- name: restart and update
+  shell: sleep 2 && shutdown -r now "ONIE update started"
+  async: 1
+  poll: 0
+  ignore_errors: true
