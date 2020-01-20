@@ -9,7 +9,7 @@
     - onie
 
 - name: Write Syslog on switch to inform Ansible Finish
-  shell: /usr/bin/logger -t "ANSIBLE" "ONIE update is staged. Rebooting now."
+  shell: /usr/bin/logger -t "ANSIBLE" "Cumulus reinstall is staged. Rebooting now."
   notify: restart and update
   tags:
     - onie

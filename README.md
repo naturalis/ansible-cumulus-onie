@@ -1,6 +1,6 @@
 # Ansible Role: Cumulus ONIE
 
-This role can update the ONIE bootloader.
+This role can stage ONIE for a reinstall of Cumulus Linux.
 
 Naturalis uses this role together with a private inventory.
 
@@ -12,7 +12,7 @@ None.
 
 Available variables are listed below.
 ```bash
-cl_oob_server: 192.168.144.5
+
 ```
 
 ## Dependencies
